@@ -1,0 +1,3 @@
+[submodule "maap-documentation-examples"]
+	path = maap-documentation-examples
+	url = https://github.com/MAAP-Project/maap-documentation-examples.git
