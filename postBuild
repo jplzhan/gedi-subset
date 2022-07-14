@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pip install papermill
+./maap-documentation-examples/build.sh
