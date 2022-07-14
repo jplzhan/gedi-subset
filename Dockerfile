@@ -21,5 +21,7 @@ RUN conda install -c conda-forge mamba && \
     find /opt/conda/ -follow -type f -name '*.js.map' -delete && \
     /opt/conda/bin/conda clean -afy
 
+RUN pip install papermill
+
 ARG IMAGE_REF
 ENV DOCKERIMAGE_PATH=${IMAGE_REF}
