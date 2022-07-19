@@ -21,8 +21,10 @@ RUN conda install -c conda-forge mamba && \
     find /opt/conda/ -follow -type f -name '*.js.map' -delete && \
     /opt/conda/bin/conda clean -afy
 
-RUN python3 -m pip install papermill
-COPY . /home/jovyan
-
 ARG IMAGE_REF
 ENV DOCKERIMAGE_PATH=${IMAGE_REF}
+
+# Boilerplate required due to using a manual Dockerfile
+RUN python3 -m pip install papermill
+COPY . /home/jovyan
+COPY maap-documentation-examples/ /home/jovyan
