@@ -27,3 +27,5 @@ ENV DOCKERIMAGE_PATH=${IMAGE_REF}
 # Boilerplate required due to using a manual Dockerfile
 RUN python3 -m pip install papermill
 COPY . /home/jovyan
+
+RUN maap-documentation-examples/build.sh
