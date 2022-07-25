@@ -31,4 +31,4 @@ COPY . /home/jovyan
 RUN ls -la
 RUN ls -la /home/jovyan
 RUN ls -la /home/jovyan/maap-documentation-examples
-RUN sh /home/jovyan/maap-documentation-examples/build.sh
+RUN /bin/bash /home/jovyan/maap-documentation-examples/build.sh
