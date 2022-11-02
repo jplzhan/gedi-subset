@@ -27,6 +27,6 @@ ENV DOCKERIMAGE_PATH=${IMAGE_REF}
 # Boilerplate required due to using a manual Dockerfile
 RUN python3 -m pip install papermill
 COPY . /home/jovyan
-pip3 install pyOpenSSL --upgrade
+RUN pip3 install pyOpenSSL --upgrade
 RUN chmod +x /home/jovyan/debug/build.sh
 RUN /bin/bash /home/jovyan/debug/build.sh
